@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Sidebar from './Sidebar';
+import TopBar from './TopBar';
 
 function App() {
   return (
@@ -8,14 +9,13 @@ function App() {
 
       <Sidebar />
 
-      {/* <TopBar />
+      <TopBar />
 
-      <TrendingGlobal />
+      {/* <TrendingGlobal />
 
       <TrendingLocal />
 
-      <Regional /> */
-      }
+      <Regional /> */}
     </div>
   );
 }
