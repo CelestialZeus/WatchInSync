@@ -1,0 +1,29 @@
+.logo > img {
+    object-fit: contain;
+    height: 150px;
+    display: block;
+    margin-left: auto;
+    margin-top:  50px;
+    margin-right: auto;
+}
+
+.sidebar {
+    background-color: #F6F7F9;
+    flex: 0.15;
+}
+
+.userContainer {
+    margin-top: 50px;
+}
+
+.Trending {
+    text-align: center;
+    font-weight: bold;
+}
+
+.AppControl {
+    text-align: center;
+    font-weight: bold;
+
+}
+
