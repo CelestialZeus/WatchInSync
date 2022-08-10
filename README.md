@@ -2,7 +2,7 @@
 
 <img src="./progress/Screenshot from 2022-08-11 01-18-31.png"></img>
 
-<p style="text-weight: bold;>August 11, 2022</p>
+<p style="text-weight: bold;">August 11, 2022</p>
 
 
 
