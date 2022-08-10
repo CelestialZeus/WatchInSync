@@ -10,6 +10,10 @@
 .sidebar {
     background-color: #F6F7F9;
     flex: 0.15;
+    margin-top: 15px;
+    padding-bottom: 20px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 
 .userContainer {
