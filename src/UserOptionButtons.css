@@ -11,6 +11,7 @@
 }
 
 .inputOption:hover {
+    display: flex;
     background-color: #5843BE;
     color: white;
     border-radius: 50px;

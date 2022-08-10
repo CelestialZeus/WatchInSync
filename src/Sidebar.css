@@ -9,7 +9,9 @@
 
 .sidebar {
     background-color: #F6F7F9;
-    flex: 0.15;
+    display:flex;
+    flex: 0.2;
+    flex-direction: column;
     margin-top: 15px;
     padding-bottom: 20px;
     border-top-right-radius: 50px;
