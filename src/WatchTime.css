@@ -5,7 +5,7 @@
 .TopWatcher {
     display: flex;
     margin:10px;
-    justify-content: space-around;
+    justify-content: space-between;
     border-radius: 30px;
     background-color: #d8dce5;
 }
@@ -16,9 +16,29 @@
 
 .WatchTime {
     margin-right: 50px;
+    padding-left: 10px;
+    margin-top: 20px;
     background-color: #F6F7F9;
     border-radius: 30px;
-    padding-left: 10px;
-    padding-right: auto;
     align-items: center;
+}
+
+.WatchTime >h3 {
+    padding-left:15px;
+    margin-bottom: 20px;
+}
+
+.TopWatcher > .TopWatcherName {
+    background-color: #F6F7F9;
+    border-radius: 30px;
+    margin-left: 10px;
+}
+
+.TopWatcher> .TopWatcherTime {
+    padding-left: 10px;
+    margin-left: 10px;
+    background-color: darkgray;
+    color: white;
+    border-radius: 30px;
+    margin-right: 10px;
 }
