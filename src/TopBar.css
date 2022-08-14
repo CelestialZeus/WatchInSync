@@ -28,6 +28,7 @@
     padding-left : 40px;
     display: flex;
     flex:0.8;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -41,3 +42,30 @@
     padding-top: 15px;
     padding-bottom: 15px;
 }
+
+
+.ProfileClosedContainer >img {
+    height:40px;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+.ProfileClosedContainer{
+    height:40px;
+    padding: 10px;
+    width: 100%;
+    align-items: center;
+    border-radius: 50px;
+    background-color: #F6F7F9;
+    display: flex;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+    color: red;
+    display: block;
+  }
+
+
+  

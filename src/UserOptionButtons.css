@@ -17,3 +17,12 @@
     margin-left: 80px;
     margin-right: 80px;
 }
+
+.UserAccountsContainer > select {
+    border: none;
+    color: black;
+    background-color: F6F7F9;
+    border-radius: 50px;
+    padding:20px;
+}
+
