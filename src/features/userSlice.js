@@ -21,6 +21,6 @@ export const userSlice = createSlice({
   },
 });
 
-export const { increment, decrement, incrementByAmount } = userSlice.actions;
+export const { login, logout } = userSlice.actions;
 export const selectUser = (state) => state.user.value;
 export default userSlice.reducer;
