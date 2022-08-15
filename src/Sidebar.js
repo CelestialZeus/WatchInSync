@@ -17,7 +17,7 @@ function Sidebar() {
 
     return (
         <div className="sidebar">
-            <div className="logo">
+            <div className="logos">
                 <img src={logo} alt={"logo"} />
             </div>
             <div className="userContainer">
