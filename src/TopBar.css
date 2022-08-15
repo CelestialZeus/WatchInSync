@@ -41,6 +41,7 @@
     align-items: center;
     padding-top: 15px;
     padding-bottom: 15px;
+    cursor: pointer;
 }
 
 
@@ -58,6 +59,7 @@
     border-radius: 50px;
     background-color: #F6F7F9;
     display: flex;
+    cursor: pointer;
 }
 
 .break {

@@ -2,7 +2,6 @@ import React from 'react'
 import SearchIcon from '@mui/icons-material/Search';
 import './TopBar.css'
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
-import logo from './logo.svg';
 import WatchTime from './WatchTime'
 import TrendingGlobal from './TrendingGlobal';
 
