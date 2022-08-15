@@ -1,17 +1,16 @@
 {
   "files": {
-    "main.css": "/WatchInSync/static/css/main.8480b956.css",
-    "main.js": "/WatchInSync/static/js/main.a3185884.js",
+    "main.css": "/WatchInSync/static/css/main.405e5e88.css",
+    "main.js": "/WatchInSync/static/js/main.cf385dae.js",
     "static/js/787.c45bd6f0.chunk.js": "/WatchInSync/static/js/787.c45bd6f0.chunk.js",
     "static/media/logo.gif": "/WatchInSync/static/media/logo.6ac2d6af30ade53daae4.gif",
-    "static/media/logo.svg": "/WatchInSync/static/media/logo.b2e5a01e505f739f1484b881277d5186.svg",
     "index.html": "/WatchInSync/index.html",
-    "main.8480b956.css.map": "/WatchInSync/static/css/main.8480b956.css.map",
-    "main.a3185884.js.map": "/WatchInSync/static/js/main.a3185884.js.map",
+    "main.405e5e88.css.map": "/WatchInSync/static/css/main.405e5e88.css.map",
+    "main.cf385dae.js.map": "/WatchInSync/static/js/main.cf385dae.js.map",
     "787.c45bd6f0.chunk.js.map": "/WatchInSync/static/js/787.c45bd6f0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8480b956.css",
-    "static/js/main.a3185884.js"
+    "static/css/main.405e5e88.css",
+    "static/js/main.cf385dae.js"
   ]
 }
