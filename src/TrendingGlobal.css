@@ -12,14 +12,16 @@
 }
 
 .TrendingGlobal > h3{
-    padding-top : 15px;
+    padding-top : 25px;
     justify-content: right;
 }
 
 .TrendingCardsContainer {
     display: flex;
-    padding-left: 12px;
+    padding-left: 20px;
     padding-right: 12px;
+    max-width: 1000px;
+    padding-bottom: 20px;
 }
 
 .TrendingGlobal {
@@ -36,9 +38,12 @@
     background-color: #F6F7F9;
     border-radius: 30px;
     height: 50px;
-    margin-top: 50px;
+    margin-top: 20px;
     display: flex;
     text-align: center;
     justify-content: center;
 }
+
+
+
 

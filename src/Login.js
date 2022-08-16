@@ -43,6 +43,9 @@ function Login() {
                     uid: userAuth.user.uid,
                 }
                 ))
+            }
+            ).catch(error => {
+                alert(error.message);
             })
     }
     const registerHandler = e => {
