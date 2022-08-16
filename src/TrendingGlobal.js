@@ -22,14 +22,14 @@ function TrendingGlobal() {
                 <h3>Trending Globally</h3>
                 <div className='TrendingCardsContainer'>
 
-                    <Card />
+                    <Card searchText="Titanic" />
 
                 </div>
             </div>
             <div className='TrendingGlobal'>
                 <h3>Trending in this circle</h3>
                 <div className='TrendingCardsContainer'>
-                    <Card />
+                    <Card searchText="vikram" />
 
                 </div>
             </div>

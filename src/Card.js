@@ -2,21 +2,20 @@ import React, { useState, useEffect } from "react";
 import "./styles.css";
 import axios from "axios";
 
-export default function Carousal() {
+export default function Carousal(searchText) {
     const [movies, setMovies] = useState([]);
     const [value, setValue] = useState(0);
-    const [search, setSearch] = useState("Titanic");
 
     useEffect(() => {
         axios
-            .get(`https://www.omdbapi.com/?s=${search}&apikey=45eb8469`)
+            .get(`https://www.omdbapi.com/?s=${searchText.searchText}&apikey=45eb8469`)
             .then((response) => {
                 setMovies(response.data);
                 response.data.Search.sort(function (a, b) {
                     return a.Year - b.Year;
                 });
             });
-    }, [search]);
+    }, [searchText]);
 
     const moveBehind = () => {
         value === -100 * (movies.Search.length - 7)
