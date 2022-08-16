@@ -1,0 +1,60 @@
+.form-control {
+    border-radius: 30px;
+    width:300px;
+    margin: 20px;
+    border: none;
+    outline: none;
+    font-size: large;
+    padding: 15px;
+}
+
+.login {
+    background-color: #F6F7F9;
+    display:flex;
+    flex: 0.2;
+    flex-direction: column;
+    margin-top: 15px;
+    padding-bottom: 20px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.loginContainer {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 80px;
+    margin-bottom: 120px;
+}
+
+
+.buttonsignin {
+    border-radius: 50px;
+    margin-left: 100px;
+    height: 50px;
+    width: 150px;
+    border: none;
+    margin-top: 50px;
+    margin-right: 80px;
+    padding : 15px;
+}
+
+.buttonsignin:hover {
+    background-color: #5843BE;
+    color: white;
+    border-radius: 50px;
+    cursor:pointer;
+}
+
+.logo > img {
+    object-fit: contain;
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-top:  50px;
+    margin-right: auto;
+}
+
+.signuptext {
+    margin-top: 50px;
+    margin-left: 20px;
+}
