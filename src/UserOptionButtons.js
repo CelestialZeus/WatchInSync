@@ -1,9 +1,9 @@
 import React from 'react'
 import './UserOptionButtons.css'
 
-function UserOptionButtons({ Icon, text }) {
+function UserOptionButtons({ Icon, text, onClick }) {
     return (
-        <div className='inputOption'>
+        <div className='inputOption' onClick={onClick}>
             <Icon icon={Icon} />
             <p>{text}</p>
         </div>

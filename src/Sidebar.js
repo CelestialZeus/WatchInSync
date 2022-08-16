@@ -12,8 +12,19 @@ import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import SettingsIcon from '@mui/icons-material/Settings';
 import HelpIcon from '@mui/icons-material/Help';
 import LogoutIcon from '@mui/icons-material/Logout';
+import { logout } from './features/userSlice';
+import { useDispatch } from 'react-redux';
+import { signOut } from 'firebase/auth';
+import { authent } from './Firebase';
 
 function Sidebar() {
+
+    const dispatch = useDispatch();
+
+    const logoutHandler = e => {
+        dispatch(logout());
+        signOut(authent);
+    }
 
     return (
         <div className="sidebar">
@@ -36,7 +47,7 @@ function Sidebar() {
                     <p className="AppControl">App Control</p>
                     <UserOptionButtons Icon={SettingsIcon} text={"Settings"} />
                     <UserOptionButtons Icon={HelpIcon} text={"Help"} />
-                    <UserOptionButtons Icon={LogoutIcon} text={"Log out"} />
+                    <UserOptionButtons Icon={LogoutIcon} text={"Log out"} onClick={logoutHandler} />
 
                 </div>
             </div>

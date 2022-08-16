@@ -5,7 +5,7 @@ import logo from './assets/logo.gif';
 import { login } from './features/userSlice';
 import { useDispatch } from 'react-redux';
 import { authent } from './Firebase';
-import { updateProfile, createUserWithEmailAndPassword } from "firebase/auth";
+import { updateProfile, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 
 
 function Login() {
@@ -34,8 +34,17 @@ function Login() {
         if (!emailaddress) {
             return alert("Please enter your email-address");
         }
+        signInWithEmailAndPassword(authent, emailaddress, password)
+            .then(userAuth => {
+                dispatch(login({
+                    email: userAuth.user.email,
+                    fullname: userAuth.user.displayName,
+                    profilepic: userAuth.user.photoURL,
+                    uid: userAuth.user.uid,
+                }
+                ))
+            })
     }
-
     const registerHandler = e => {
         e.preventDefault();
         if (!name) {
