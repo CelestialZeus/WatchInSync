@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/WatchInSync/static/css/main.405e5e88.css",
-    "main.js": "/WatchInSync/static/js/main.cf385dae.js",
+    "main.css": "/WatchInSync/static/css/main.4e7c96af.css",
+    "main.js": "/WatchInSync/static/js/main.c7aec24e.js",
     "static/js/787.c45bd6f0.chunk.js": "/WatchInSync/static/js/787.c45bd6f0.chunk.js",
     "static/media/logo.gif": "/WatchInSync/static/media/logo.6ac2d6af30ade53daae4.gif",
     "index.html": "/WatchInSync/index.html",
-    "main.405e5e88.css.map": "/WatchInSync/static/css/main.405e5e88.css.map",
-    "main.cf385dae.js.map": "/WatchInSync/static/js/main.cf385dae.js.map",
+    "main.4e7c96af.css.map": "/WatchInSync/static/css/main.4e7c96af.css.map",
+    "main.c7aec24e.js.map": "/WatchInSync/static/js/main.c7aec24e.js.map",
     "787.c45bd6f0.chunk.js.map": "/WatchInSync/static/js/787.c45bd6f0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.405e5e88.css",
-    "static/js/main.cf385dae.js"
+    "static/css/main.4e7c96af.css",
+    "static/js/main.c7aec24e.js"
   ]
 }
