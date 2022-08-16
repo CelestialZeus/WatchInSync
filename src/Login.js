@@ -4,7 +4,8 @@ import React, { useState } from 'react'
 import logo from './assets/logo.gif';
 import { login } from './features/userSlice';
 import { useDispatch } from 'react-redux';
-import { auth } from './Firebase';
+import { authent } from './Firebase';
+import { updateProfile, createUserWithEmailAndPassword } from "firebase/auth";
 
 
 function Login() {
@@ -30,43 +31,38 @@ function Login() {
 
     const loginHandler = e => {
         e.preventDefault();
-        // if (!emailaddress) {
-        //     return alert("Please enter your email-address");
-        // }
+        if (!emailaddress) {
+            return alert("Please enter your email-address");
+        }
     }
 
     const registerHandler = e => {
         e.preventDefault();
-        // if (!name) {
-        //     return alert("Please enter your name");
-        // }
-        // if (!emailaddress) {
-        //     return alert("Please enter your email-address");
-        // }
+        if (!name) {
+            return alert("Please enter your name");
+        }
+        if (!emailaddress) {
+            return alert("Please enter your email-address");
+        }
 
-        // auth.createUserWithEmailAndPassword(emailaddress, password)
-        //     .then(userAuth => {
-        //         userAuth.user.updateProfile({
-        //             displayName: name,
-        //             photoURL: profilepic
-        //         })
-        //             .then(() => {
-        //                 console.log("Profile updated");
-        //             }).catch(err => {
-        //                 console.log(err);
-        //             }
-        //             )
+        createUserWithEmailAndPassword(authent, emailaddress, password)
+            .then(userAuth => {
+                updateProfile(authent.currentUser, {
+                    displayName: name,
+                    photoURL: profilepic
+                })
 
-        //             .then(
-        //                 dispatch(login({
-        //                     email: userAuth.user.email,
-        //                     fullname: name,
-        //                     profilepic: profilepic,
-        //                     uid: userAuth.user.uid,
-        //                 })
-        //                 ))
-        //     })
-        //     .catch(error => alert(error.message));
+                    .then(
+                        dispatch(login({
+                            email: userAuth.user.email,
+                            fullname: name,
+                            profilepic: profilepic,
+                            uid: userAuth.user.uid,
+                        })
+                        ))
+            })
+            .catch(error => alert(error.message));
+        console.log("Registered");
     }
 
 

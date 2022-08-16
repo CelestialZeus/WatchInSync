@@ -6,21 +6,20 @@ export const userSlice = createSlice({
   initialState: {
     user: null,
   },
-  // The `reducers` field lets us define reducers and generate associated actions
   reducers: {
     login: (state, action) => {
       state.user = action.payload;
+      console.log(state.user);
+      console.log('success');
+
     },
     logout: (state) => {
       state.user = null;
-    },
-    // Use the PayloadAction type to declare the contents of `action.payload`
-    incrementByAmount: (state, action) => {
-      state.value += action.payload;
+      console.log('logout success');
     },
   },
 });
 
 export const { login, logout } = userSlice.actions;
-export const selectUser = (state) => state.user.value;
+export const selectUser = (state) => state.user.user;
 export default userSlice.reducer;
