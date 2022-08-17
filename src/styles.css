@@ -5,7 +5,7 @@
     box-sizing: border-box;
     margin: 10px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
     overflow: hidden;
   }
@@ -19,12 +19,14 @@
   
   #moveBehind {
     right: 0;
+    border: none;
     width: 3%;
     border-radius: 50%;
     height: 30px;
   }
   #moveAhead {
     right: 0;
+    border: none;
     width: 3%;
     border-radius: 50%;
     height: 30px;;
@@ -40,20 +42,21 @@
 
   .glide > img {
     height:200px;
-    
     object-fit: fill;
+    cursor: pointer;
   }
 
   .glide > p {
     font-weight: bold;
-    font-size: 80%;
-    overflow: hidden;
-  }
+    font-size: 100%;
+    cursor: pointer;
+   }
 
 .bodyDiv {
     padding-left: 0px;
     align-items: center;
     display: flex;
     padding-right: 0px;
+    overflow: hidden;
 
 }
