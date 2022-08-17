@@ -6,26 +6,39 @@ export default function Carousal(searchText) {
     const [movies, setMovies] = useState([]);
     const [value, setValue] = useState(0);
 
+    // useEffect(() => {
+    //     axios
+    //         .get(`https://www.omdbapi.com/?s=${searchText.searchText}&apikey=45eb8469`)
+    //         .then((response) => {
+    //             setMovies(response.data);
+    //             console.log(response.data);
+    //             response.data.Search.sort(function (a, b) {
+    //                 return a.Year - b.Year;
+    //             });
+    //         });
+    // }, [searchText]);
+
     useEffect(() => {
         axios
-            .get(`https://www.omdbapi.com/?s=${searchText.searchText}&apikey=45eb8469`)
+            .get(`https://api.themoviedb.org/3/trending/all/day?api_key=f2684cd54612f9a4d33528a1cef172bb`)
             .then((response) => {
                 setMovies(response.data);
-                response.data.Search.sort(function (a, b) {
-                    return a.Year - b.Year;
+                console.log(response.data);
+                response.data.results.sort(function (a, b) {
+                    return a.release_date - b.release_date;
                 });
             });
-    }, [searchText]);
+    }, []);
 
     const moveBehind = () => {
-        value === -100 * (movies.Search.length - 7)
+        value === -100 * (movies.results.length - 7)
             ? setValue(0)
             : setValue(value - 100);
     };
     const moveAhead = () => {
         console.log(value);
         value === 0
-            ? setValue(-100 * (movies.Search.length - 7))
+            ? setValue(-100 * (movies.results.length - 7))
             : setValue(value + 100);
     };
 
@@ -35,8 +48,8 @@ export default function Carousal(searchText) {
 
             <div className="glider">
 
-                {movies.Response === "True" ? (
-                    movies.Search.map((movie, index) => {
+                {movies.total_results > 1 ? (
+                    movies.results.map((movie, index) => {
                         return (
 
                             <div
@@ -45,12 +58,13 @@ export default function Carousal(searchText) {
                                 style={{ transform: `translateX(${value}%)` }}
                             >
                                 <img
-                                    key={movie.imdbID}
+                                    key={movie.id}
                                     className="poster"
-                                    src={movie.Poster}
-                                    alt={movie.imdbID}
+                                    src={"https://image.tmdb.org/t/p/original/" + movie.poster_path}
+                                    alt={movie.id}
                                 />
-                                <p>{movie.Title} ({movie.Year})</p>
+                                <p>{movie.original_title ? (movie.original_title) : (movie.original_name)}</p>
+                                <p>{movie.release_date ? (movie.release_date.substring(0, 4)) : (movie.first_air_date.substring(0, 4))}</p>
                             </div>
                         );
                     })

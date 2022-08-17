@@ -27,7 +27,7 @@ function TrendingGlobal() {
                 </div>
             </div>
             <div className='TrendingGlobal'>
-                <h3>Trending in this circle</h3>
+                <h3>Trending in My Circle</h3>
                 <div className='TrendingCardsContainer'>
                     <Card searchText="vikram" />
 
