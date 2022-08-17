@@ -60,3 +60,9 @@
     overflow: hidden;
 
 }
+
+.popupcontent {
+  background-color: #f6f6f6;
+  border-radius: 30px;
+  padding: 10px;
+}

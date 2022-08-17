@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "./styles.css";
+import "./Card.css";
 import axios from "axios";
 import Popup from 'reactjs-popup';
+import MoviePopup from "./MoviePopup";
 
 export default function Carousal(searchText) {
     const [movies, setMovies] = useState([]);
@@ -32,13 +33,6 @@ export default function Carousal(searchText) {
             : setValue(value + 100);
     };
 
-    const openPopup = () => {
-
-        <Popup trigger={<button> Trigger</button>} position="right center">
-            <div>Popup content here !!</div>
-        </Popup>
-        console.log("popup activated");
-    }
 
     return (
         <div className="bodyDiv">
@@ -60,15 +54,11 @@ export default function Carousal(searchText) {
                                     className="poster"
                                     src={"https://image.tmdb.org/t/p/original/" + movie.poster_path}
                                     alt={movie.id}
-                                    onClick={openPopup}
                                 />
                                 <p>{movie.original_title ? (movie.original_title) : (movie.original_name)} <br></br> ({movie.release_date ? (movie.release_date.substring(0, 4)) : (movie.first_air_date.substring(0, 4))})</p>
-
-                                {/* <Omdb searchText={movie.original_title ? (movie.original_title) : (movie.original_name)} searchyear={movie.release_date ? (movie.release_date.substring(0, 4)) : (movie.first_air_date.substring(0, 4))} /> */}
-                                <Popup trigger={<button> Trigger</button>} position="right center">
-                                    <div>Popup content here !!</div>
-                                </Popup>
+                                <MoviePopup movie={movie} />
                             </div>
+
                         );
                     })
 
