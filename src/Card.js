@@ -3,10 +3,17 @@ import "./Card.css";
 import axios from "axios";
 import Popup from 'reactjs-popup';
 import MoviePopup from "./MoviePopup";
+import { confpopon, selectPop } from "./features/PopupSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function Carousal(searchText) {
     const [movies, setMovies] = useState([]);
     const [value, setValue] = useState(0);
+    const [popup, setPopup] = useState(false);
+    const pop = useSelector((state) => state.popup.popupval);
+    const dispatch = useDispatch();
+
+
 
 
     useEffect(() => {
@@ -20,6 +27,7 @@ export default function Carousal(searchText) {
             });
 
     }, []);
+
 
     const moveBehind = () => {
         value === -100 * (movies.results.length - 7)
@@ -54,11 +62,15 @@ export default function Carousal(searchText) {
                                     className="poster"
                                     src={"https://image.tmdb.org/t/p/original/" + movie.poster_path}
                                     alt={movie.id}
+                                    onClick={() => {
+                                        dispatch(confpopon(true));
+                                        console.log(pop)
+                                    }}
                                 />
                                 <p>{movie.original_title ? (movie.original_title) : (movie.original_name)} <br></br> ({movie.release_date ? (movie.release_date.substring(0, 4)) : (movie.first_air_date.substring(0, 4))})</p>
-                                <MoviePopup movie={movie} />
-                            </div>
+                                {pop == true && <MoviePopup movie={movie} />}
 
+                            </div>
                         );
                     })
 
